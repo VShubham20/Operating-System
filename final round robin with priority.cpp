@@ -3,6 +3,8 @@
  Section - K17SM
  Roll no - B41
  Reg. no - 11716628
+ Q-5 
+ This is c program but compiled in cpp because some features may not work in c
  */
 #include <iostream>
 #include<stdio.h>
