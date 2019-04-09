@@ -3,6 +3,7 @@
  Section - K17SM
  Roll no - B41
  Reg. no - 11716628
+ Q-16
  */
 
 #include<stdio.h> 
