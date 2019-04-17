@@ -12,7 +12,7 @@ using namespace std;
 
 struct process
 {
-    int arr,burst,prior,firstt,i,status,rect,burl,compt,waitingt,turnaroundt;
+    int arr,burst,prior,firstt,i,status,rect,burl,compt,waitingt,turnaroundt;  // declaring all variables
 }*run=NULL;
 
 int n,tq,tburst=0;
@@ -38,8 +38,8 @@ int main()
         printf("\tBurst Time : ");                    // taking burst time
         scanf("%d", &p[i].burst);
         p[i].burl = p[i].burst;
-        printf("\tPriority : ");
-        scanf("%d", &p[i].prior);
+        printf("\tPriority : ");  
+        scanf("%d", &p[i].prior);                     // taking all priorities
         p[i].i = i+1;
         p[i].status = 0;
         p[i].rect = -1; 
@@ -58,12 +58,12 @@ int main()
     {
         for(int i = 0; i < n; i++)                                                                    //priority increment
         {
-            if(p[i].rect == -1 && p[i].status == 1)
+            if(p[i].rect == -1 && p[i].status == 1)         // because if priority of 2 processes are same then program will be in deadlock
             {
                 if((time)%10 == (p[i].arr)%10)
                 {
                     p[i].prior++;
-                    printf("\nPriority of process P%d increasing by 1.", p[i].i);
+                    printf("\nPriority of process P%d increasing by 1.", p[i].i);       
                     node *x;
                     x = start;
                     while(x->next->q->i==i)
